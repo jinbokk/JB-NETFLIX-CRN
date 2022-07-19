@@ -20,7 +20,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div>
+    <div className="main">
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
