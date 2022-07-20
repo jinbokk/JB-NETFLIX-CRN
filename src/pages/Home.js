@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { movieAction } from "../redux/actions/movieAction";
 import { useDispatch, useSelector } from "react-redux";
 import Banner from "../components/Banner";
+import MovieSlide from "../components/MovieSlide";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,13 @@ const Home = () => {
   return (
     <div>
       {popularMovies.results && <Banner movie={popularMovies.results[0]} />}
-      {/* redux의 사용 이유는, props를 안쓰기 위해서가 아니다. 모든 상황에서 props를 사용하는 것을 지양하기 위함이다. */}
+
+      <h1>popularMovies</h1>
+      <MovieSlide movies={popularMovies} />
+      <h1>topRatedMovies</h1>
+      <MovieSlide movies={topRatedMovies} />
+      <h1>upcomingMovies</h1>
+      <MovieSlide moviee={upcomingMovies} />
     </div>
   );
 };
