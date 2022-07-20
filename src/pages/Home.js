@@ -21,8 +21,8 @@ const Home = () => {
 
   return (
     <div>
-      {popularMovies.results && <Banner movie={popularMovies.results[0]} />}
-
+      {popularMovies && <Banner movie={popularMovies.results[0]} />}
+      {/* <Banner movie={popularMovies.results[0]} /> */}
       <h1>popularMovies</h1>
       <MovieSlide movies={popularMovies} />
       <h1>topRatedMovies</h1>
